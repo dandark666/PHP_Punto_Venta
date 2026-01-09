@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: #2D2D29;
+    min-width: 400px;
+}
+h3{
+    font-size: 30px;
+    color:white;
+    text-align: center;
+    
+}
+
+.header{
+    background-color: #1b3039;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.header .nav-links li:hover,
+/**/.overlay a:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 700;
+    color: #eceff1; 
+}
+
+.header .nav-links a:hover{
+    color: #ffbc0e;
+}
+
+/**/.menu {
+    display:none;
+}
+
+.header .btn button,
+/**/.header .menu button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,
+/**/.header .menu button:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+
+
+/**/@media screen and (max-width: 800px){
+    .nav-links, .btn {
+        display: none;
+    }
+    .menu {
+        display: inherit;
+    }
+}
+
+
+
+/*Nav Mobile*/
+
+.header a{
+    text-decoration: none;  
+    /*borramos el que teniamos en .header .nav-links a*/ 
+}
+
+.header .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+.header .overlay a:hover, 
+.header .overlay a:focus{
+    color: #ffbc0e;
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+    .header .overlay a{
+        font-size: 20px;
+    }
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* Contenedor principal */
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px; /* Espacio interno del contenedor */
+}
+
+/* Artículos dentro del contenedor */
+.content-art1,
+.content-art2 {
+    flex: 1 1 45%; /* Ocupan 45% del ancho cada uno */
+    margin: 10px;
+    min-width: 300px; /* Ancho mínimo para evitar que sean demasiado pequeños */
+}
+
+/* Formulario */
+form {
+    width: 100%;
+    background-color: #1b3039; /* Fondo verde para el formulario */
+    padding: 20px; /* Espacio interno del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+form table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+form td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+form input[type="text"],
+form select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #DFECE6;
+    color: black; /* Texto negro en los botones */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c3e5d7;
+}
+
+/* Tablas */
+.tablaCat {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Espacio vertical alrededor de las tablas */
+    background-color: #fff; /* Fondo blanco para la tabla */
+}
+
+.tablaCat th,
+.tablaCat td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left; /* Alineación del texto */
+    background-color: #fff; /* Fondo blanco para celdas */
+}
+
+.tablaCat th {
+    background-color: #f2f2f2; /* Fondo blanco para los encabezados */
+}
+
+/* Botones */
+.buttons {
+    padding: 10px 20px;
+    background-color: #c3e5d7;
+    color: black; /* Texto negro en los botones */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+/* Estilos responsivos */
+
+/* Pantallas medianas */
+@media (max-width: 768px) {
+    .content-art1,
+    .content-art2 {
+        flex: 1 1 100%; /* Ocupan el 100% del ancho */
+    }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 500px) {
+    .tablaCat {
+        width: 100%; /* Asegura que la tabla ocupe todo el ancho */
+        margin: 0 auto; /* Centrado horizontal */
+    }
+
+    .tablaCat th, 
+    .tablaCat td {
+        display: block; /* Convierte celdas en bloques */
+        width: 100%; /* Asegura que las celdas ocupen todo el ancho */
+        box-sizing: border-box; /* Incluye padding y border en el width */
+    }
+
+    .tablaCat th {
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+
+    .tablaCat td {
+        text-align: left; /* Alineación izquierda para datos */
+        padding: 4px; /* Padding más pequeño */
+        font-size: 12px; /* Fuente más pequeña */
+    }
+
+    .tablaCat td:before {
+        content: attr(data-label); /* Usa el atributo data-label para mostrar el encabezado */
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .buttons {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
